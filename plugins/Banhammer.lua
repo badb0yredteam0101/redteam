@@ -131,7 +131,7 @@ local function run(msg, matches)
     elseif matches[1]:lower() == 'id' then
       local name = user_print_name(msg.from)
       savelog(msg.to.id, name.." ["..msg.from.id.."] used /id ")
-      return "Group ID for " ..string.gsub(msg.to.print_name, "_", " ").. ":\n\n"..msg.to.id  
+      return "👥️ Group ID for " ..string.gsub(msg.to.print_name, "_", " ").. ":\n"..msg.to.id.. "\n👥 User ID for " ..string.gsub(msg.from.print_name, "_", " ").. ":\n"..msg.from.id 
     end
   end
   if matches[1]:lower() == 'kickme' then-- /kickme
@@ -308,21 +308,21 @@ end
 
 return {
   patterns = {
-    "^[!/]([Bb]anall) (.*)$",
-    "^[!/]([Bb]anall)$",
-    "^[!/]([Bb]anlist) (.*)$",
-    "^[!/]([Bb]anlist)$",
-    "^[!/]([Gg]banlist)$",
-    "^[!/]([Bb]an) (.*)$",
-    "^[!/]([Kk]ick)$",
-    "^[!/]([Uu]nban) (.*)$",
-    "^[!/]([Uu]nbanall) (.*)$",
-    "^[!/]([Uu]nbanall)$",
-    "^[!/]([Kk]ick) (.*)$",
-    "^[!/]([Kk]ickme)$",
-    "^[!/]([Bb]an)$",
-    "^[!/]([Uu]nban)$",
-    "^[!/]([Ii]d)$",
+    "^[!/#]([Bb]anall) (.*)$",
+    "^[!/#]([Bb]anall)$",
+    "^[!/#]([Bb]anlist) (.*)$",
+    "^[!/#]([Bb]anlist)$",
+    "^[!/#]([Gg]banlist)$",
+    "^[!/#]([Bb]an) (.*)$",
+    "^[!/#]([Kk]ick)$",
+    "^[!/#]([Uu]nban) (.*)$",
+    "^[!/#]([Uu]nbanall) (.*)$",
+    "^[!/#]([Uu]nbanall)$",
+    "^[!/#]([Kk]ick) (.*)$",
+    "^[!/#]([Kk]ickme)$",
+    "^[!/#]([Bb]an)$",
+    "^[!/#]([Uu]nban)$",
+    "^[!/#]([Ii]d)$",
     "^!!tgservice (.+)$"
   },
   run = run,
