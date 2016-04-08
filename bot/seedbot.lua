@@ -208,112 +208,99 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "onservice",
-    "inrealm",
-    "ingroup",
-    "inpm",
-    "banhammer",
-    "stats",
-    "anti_spam",
-    "owners",
-    "arabic_lock",
-    "set",
-    "get",
-    "broadcast",
-    "download_media",
-    "invite",
-    "all",
-    "leave_ban",
-    "admin"
+    "Onservice",
+    "Inrealm",
+    "Ingroup",
+    "Inpm",
+    "Banhammer",
+    "Stats",
+    "Anti_Spam",
+    "Owners",
+    "Arabic_Lock",
+    "Set",
+    "Get",
+    "Broadcast",
+    "Download_Media",
+    "Invite",
+    "All",
+    "Leave_Ban",
+    "Admin"
     },
-    sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {175636120,198794027},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
+An advanced administration bot based on TG-CLI written in Lua
 
-https://github.com/SEEDTEAM/TeleSeed
+@Redteam_01_13 [Founder]
 
-Our team!
-Alphonse (@Iwals)
-I M /-\ N (@Imandaneshi)
-Siyanew (@Siyanew)
-Rondoozle (@Potus)
-Seyedan (@Seyedan25)
+@SHO_OKER_ADMIN [Sudo]
 
-Special thanks to:
-Juan Potato
-Siyanew
-Topkecleon
-Vamptacus
-
-Our channels:
-English: @TeleSeedCH
-Persian: @IranSeed
+Our Cannel:
+@Grandex_CH
 ]],
     help_text_realm = [[
 Realm Commands:
-
 !creategroup [name]
 Create a group
-
+〰〰〰〰〰〰〰〰
 !createrealm [name]
 Create a realm
-
+〰〰〰〰〰〰〰〰
 !setname [name]
 Set realm name
-
+〰〰〰〰〰〰〰〰
 !setabout [group_id] [text]
 Set a group's about text
-
+〰〰〰〰〰〰〰〰
 !setrules [grupo_id] [text]
 Set a group's rules
-
+〰〰〰〰〰〰〰〰
 !lock [grupo_id] [setting]
 Lock a group's setting
-
+〰〰〰〰〰〰〰〰
 !unlock [grupo_id] [setting]
 Unock a group's setting
-
+〰〰〰〰〰〰〰〰
 !wholist
 Get a list of members in group/realm
-
+〰〰〰〰〰〰〰〰
 !who
 Get a file of members in group/realm
-
+〰〰〰〰〰〰〰〰
 !type
 Get group type
-
+〰〰〰〰〰〰〰〰
 !kill chat [grupo_id]
 Kick all memebers and delete group
-
+〰〰〰〰〰〰〰〰
 !kill realm [realm_id]
 Kick all members and delete realm
-
+〰〰〰〰〰〰〰〰
 !addadmin [id|username]
 Promote an admin by id OR username *Sudo only
-
+〰〰〰〰〰〰〰〰
 !removeadmin [id|username]
 Demote an admin by id OR username *Sudo only
-
+〰〰〰〰〰〰〰〰
 !list groups
 Get a list of all groups
-
+〰〰〰〰〰〰〰〰
 !list realms
 Get a list of all realms
-
+〰〰〰〰〰〰〰〰
 !log
 Get a logfile of current group or realm
-
+〰〰〰〰〰〰〰〰
 !broadcast [text]
 !broadcast Hello !
 Send text to all groups
 » Only sudo users can run this command
-
+〰〰〰〰〰〰〰〰
 !bc [group_id] [text]
 !bc 123456789 Hello !
 This command will send text to [group_id]
-
+〰〰〰〰〰〰〰〰
 » U can use both "/" and "!" 
 
 » Only mods, owner and admin can add bots in group
@@ -325,100 +312,177 @@ This command will send text to [group_id]
 ]],
     help_text = [[
 Commands list :
-
 !kick [username|id]
 You can also do it by reply
-
+〰〰〰〰〰〰〰〰
 !ban [ username|id]
 You can also do it by reply
-
+〰〰〰〰〰〰〰〰
 !unban [id]
 You can also do it by reply
-
+〰〰〰〰〰〰〰〰
 !who
 Members list
-
+〰〰〰〰〰〰〰〰
 !modlist
 Moderators list
-
+〰〰〰〰〰〰〰〰
 !promote [username]
 Promote someone
-
+〰〰〰〰〰〰〰〰
 !demote [username]
 Demote someone
-
+〰〰〰〰〰〰〰〰
 !kickme
 Will kick user
-
+〰〰〰〰〰〰〰〰
+!add [bot link]
+Will add a bot to group
+〰〰〰〰〰〰〰〰
+!praytime [city]
+Returns city praytime
+〰〰〰〰〰〰〰〰
+!addword [text]
+Added word to badword list
+〰〰〰〰〰〰〰〰
+!remword [text]
+Removed word from badword list
+〰〰〰〰〰〰〰〰
+!badwords
+Show list of badwords
+〰〰〰〰〰〰〰〰
+!clearbadwords
+Clean badwords list
+〰〰〰〰〰〰〰〰
+!bot off
+Bot off on chat
+〰〰〰〰〰〰〰〰
+!bot on
+Bot on in chat
+〰〰〰〰〰〰〰〰
+!calc [Your Formulas]
+Returns your result
+〰〰〰〰〰〰〰〰
+!clantag [clan tag]
+Returns clan profile
+〰〰〰〰〰〰〰〰
+!members [clan tag]
+Returns list of clan members
+〰〰〰〰〰〰〰〰
+!src [text]
+Search in google
+〰〰〰〰〰〰〰〰
+!img [text]
+Search image in google
+〰〰〰〰〰〰〰〰
+!hackernews
+Returns hacker news
+〰〰〰〰〰〰〰〰
+!info
+Returns user information
+〰〰〰〰〰〰〰〰
+!insta [instagram id]
+Returns instagram profile information
+〰〰〰〰〰〰〰〰
+!linkpv
+Returns group link on private
+〰〰〰〰〰〰〰〰
+!feedback [text]
+Send viewpoint to admins
+〰〰〰〰〰〰〰〰
+!loc [place]
+Returns location from place
+〰〰〰〰〰〰〰〰
+!map [place]
+Returns photo from place
+〰〰〰〰〰〰〰〰
+!photo
+Take photo from sticker
+〰〰〰〰〰〰〰〰
+!sticker
+Take sticker from photo
+〰〰〰〰〰〰〰〰
+!tex [text]
+Take text to photo
+〰〰〰〰〰〰〰〰
+!sticker [text]
+Take text to sticker
+〰〰〰〰〰〰〰〰
+!voice [text]
+Take text to audio
+〰〰〰〰〰〰〰〰
+!webshot [url]
+Take a screen shot from url
+〰〰〰〰〰〰〰〰
 !about
 Group description
-
+〰〰〰〰〰〰〰〰
 !setphoto
 Set and locks group photo
-
+〰〰〰〰〰〰〰〰
 !setname [name]
 Set group name
-
+〰〰〰〰〰〰〰〰
 !rules
 Group rules
-
+〰〰〰〰〰〰〰〰
 !id
 Return group id or user id
-
+〰〰〰〰〰〰〰〰
 !help
 Get commands list
-
-!lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
-
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
+〰〰〰〰〰〰〰〰
+!lock [member|name|bots|ads|tag|join|arabic|share|video|voice|leave] 
+Locks [member|name|bots|ads|tag|join|arabic|share|video|voice|leaveing] 
+〰〰〰〰〰〰〰〰
+!unlock [member|name|bots|ads|tag|join|arabic|share|video|voice|leave]
+Unlocks [member|name|bots|ads|tag|join|arabic|share|video|voice|leaving]
+〰〰〰〰〰〰〰〰
 !set rules [text]
 Set [text] as rules
-
+〰〰〰〰〰〰〰〰
 !set about [text]
 Set [text] as about
-
+〰〰〰〰〰〰〰〰
 !settings
 Returns group settings
-
+〰〰〰〰〰〰〰〰
 !newlink
 Create/revoke your group link
-
+〰〰〰〰〰〰〰〰
 !link
 Returns group link
-
+〰〰〰〰〰〰〰〰
 !owner
 Returns group owner id
-
+〰〰〰〰〰〰〰〰
 !setowner [id]
 Will set id as owner
-
+〰〰〰〰〰〰〰〰
 !setflood [value]
 Set [value] as flood sensitivity
-
+〰〰〰〰〰〰〰〰
 !stats
 Simple message statistics
-
+〰〰〰〰〰〰〰〰
 !save [value] [text]
 Save [text] as [value]
-
+〰〰〰〰〰〰〰〰
 !get [value]
 Returns text of [value]
-
+〰〰〰〰〰〰〰〰
 !clean [modlist|rules|about]
 Will clear [modlist|rules|about] and set it to nil
-
+〰〰〰〰〰〰〰〰
 !res [username]
 Returns user id
-
+〰〰〰〰〰〰〰〰
 !log
 Will return group logs
-
+〰〰〰〰〰〰〰〰
 !banlist
 Will return group ban list
-
+〰〰〰〰〰〰〰〰
 » U can use both "/" and "!" 
 
 » Only mods, owner and admin can add bots in group
@@ -426,6 +490,8 @@ Will return group ban list
 » Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
 
 » Only owner can use res,setowner,promote,demote and log commands
+
+» Only owner can use !invpouria to invite sudo in group
 
 ]]
   }
