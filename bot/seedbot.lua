@@ -232,7 +232,8 @@ function create_config( )
     "Lock_Join",
     "Lock_Share",
     "Lock_Video",
-    "Lock_Voice"
+    "Lock_Voice",
+    "Plugins"
     },
     sudo_users = {175636120,198794027},--Sudo users
     disabled_channels = {},
