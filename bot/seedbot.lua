@@ -406,15 +406,15 @@ Returns location from place
 Returns photo from place
 〰〰〰〰〰〰〰〰
 !photo
-Take photo from sticker
+Take photo from sticker by reaply
 〰〰〰〰〰〰〰〰
 !sticker
-Take sticker from photo
+Take sticker from photo by reaply
 〰〰〰〰〰〰〰〰
 !tex [text]
 Take text to photo
 〰〰〰〰〰〰〰〰
-!sticker [text]
+!sticker [size] [text]
 Take text to sticker
 〰〰〰〰〰〰〰〰
 !voice [text]
