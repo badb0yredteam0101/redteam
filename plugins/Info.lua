@@ -10,14 +10,14 @@ local function callback_reply(extra, success, result)
   elseif is_admin(result) then
     userrank = "Admin ⭐️⭐️⭐️"
     send_document(org_chat_id,"./icons/3.webp", ok_cb, false)
-  elseif tonumber(result.from.id) == tonumber(gp_leader) then
-    userrank = "Leader ⭐️⭐️"
+  elseif tonumber(result.from.id) == tonumber(group_owner) then
+    userrank = "Owner ⭐️⭐️"
     send_document(org_chat_id,"./icons/6.webp", ok_cb, false)
   elseif is_momod(result) then
     userrank = "Moderator ⭐️"
     send_document(org_chat_id,"./icons/4.webp", ok_cb, false)
   elseif tonumber(result.from.id) == tonumber(our_id) then
-    userrank = "Umbrella ⭐️⭐️⭐️⭐️⭐️⭐️"
+    userrank = "Grandex ⭐️⭐️⭐️⭐️⭐️⭐️"
     send_document(org_chat_id,"./icons/9.webp", ok_cb, false)
   elseif result.from.username then
     if string.sub(result.from.username:lower(), -3) == "bot" then
@@ -183,14 +183,14 @@ local function callback_res(extra, success, result)
   elseif is_admin(result) then
     userrank = "Admin ⭐️⭐️⭐️"
     send_document(org_chat_id,"./icons/3.webp", ok_cb, false)
-  elseif tonumber(result.id) == tonumber(gp_leader) then
-    userrank = "Leader ⭐️⭐️"
+  elseif tonumber(result.id) == tonumber(group_owner) then
+    userrank = "Owner ⭐️⭐️"
     send_document(org_chat_id,"./icons/6.webp", ok_cb, false)
   elseif is_momod(result) then
     userrank = "Moderator ⭐️"
     send_document(org_chat_id,"./icons/4.webp", ok_cb, false)
   elseif tonumber(result.id) == tonumber(our_id) then
-    userrank = "Umbrella ⭐️⭐️⭐️⭐️⭐️⭐️"
+    userrank = "Grandex ⭐️⭐️⭐️⭐️⭐️⭐️"
     send_document(org_chat_id,"./icons/9.webp", ok_cb, false)
   elseif string.sub(result.username:lower(), -3) == 'bot' then
     userrank = "API Bot"
@@ -280,14 +280,14 @@ local function callback_info(extra, success, result)
   elseif is_admin(result) then
     userrank = "Admin ⭐️⭐️⭐️"
     send_document(org_chat_id,"./icons/3.webp", ok_cb, false)
-  elseif tonumber(result.id) == tonumber(gp_leader) then
-    userrank = "Leader ⭐️⭐️"
+  elseif tonumber(result.id) == tonumber(group_owner) then
+    userrank = "Owner ⭐️⭐️"
     send_document(org_chat_id,"./icons/6.webp", ok_cb, false)
   elseif is_momod(result) then
     userrank = "Moderator ⭐️"
     send_document(org_chat_id,"./icons/4.webp", ok_cb, false)
   elseif tonumber(result.id) == tonumber(our_id) then
-    userrank = "Umbrella ⭐️⭐️⭐️⭐️⭐️⭐️"
+    userrank = "Grandex ⭐️⭐️⭐️⭐️⭐️⭐️"
     send_document(org_chat_id,"./icons/9.webp", ok_cb, false)
   elseif string.sub(result.username:lower(), -3) == 'bot' then
     userrank = "API Bot"
@@ -446,8 +446,8 @@ local function run(msg, matches)
       elseif is_admin(msg) then
         userrank = "Admin ⭐️⭐️⭐️"
         send_document("chat#id"..msg.to.id,"./icons/3.webp", ok_cb, false)
-      elseif tonumber(msg.from.id) == tonumber(gp_leader) then
-        userrank = "Leader ⭐️⭐️"
+      elseif tonumber(msg.from.id) == tonumber(group_owner) then
+        userrank = "Owner ⭐️⭐️"
         send_document("chat#id"..msg.to.id,"./icons/6.webp", ok_cb, false)
       elseif is_momod(msg) then
         userrank = "Moderator ⭐️"
