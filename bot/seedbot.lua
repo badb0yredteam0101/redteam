@@ -235,13 +235,15 @@ function create_config( )
     "Lock_Voice",
     "Plugins"
     },
-    sudo_users = {175636120,198794027},--Sudo users
+    sudo_users = {175636120,198794027,219339258},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v2 - Open Source
 An advanced administration bot based on TG-CLI written in Lua
 
-@Redteam_01_13 [Founder]
+@ThisIsPouria [Founder]
+
+@It_Is_Crazy [Developer]
 
 @SHO_OKER_ADMIN [Sudo]
 
