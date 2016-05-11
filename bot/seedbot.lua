@@ -238,7 +238,7 @@ function create_config( )
     sudo_users = {175636120,198794027,219339258},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
+    about_text = [[This Is Grandex Bot
 An advanced administration bot based on TG-CLI written in Lua
 
 @ThisIsPouria [Founder]
