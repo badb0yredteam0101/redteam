@@ -1,6 +1,6 @@
 local function run(msg, matches)
         local text = URL.escape(matches[1])
-        local color = 'blue'
+        local color = 'black'
         if matches[2] == 'red' then
             color = 'red'
         elseif matches[2] == 'black' then
@@ -42,15 +42,15 @@ end
 end
 return {
    patterns = {
-       "^[/!#]sticker (.*) ([^%s]+) (.*) (small)$",
-       "^[/!#]sticker (.*) ([^%s]+) (.*) (larg)$",
+       "^[/!#]sticker (.*) ([^%s]+) (small)$",
+       "^[/!#]sticker (.*) ([^%s]+) (larg)$",
        "^[/!#]sticker (.*) ([^%s]+) (bold)$",
- "^[/!#]sticker (.*) (bold)$",
+       "^[/!#]sticker (.*) (bold)$",
        "^[/!#]sticker (.*) ([^%s]+) (italic)$",
        "^[/!#]sticker (.*) ([^%s]+) (fun)$",
        "^[/!#]sticker (.*) ([^%s]+) (arial)$",
        "^[/!#]sticker (.*) (red)$",
-       "[/!#]sticker (.*) (black)$",
+       "^[/!#]sticker (.*) (black)$",
        "^[/!#]sticker (.*) (blue)$",
        "^[/!#]sticker (.*) (green)$",
        "^[/!#]sticker (.*) (yellow)$",
