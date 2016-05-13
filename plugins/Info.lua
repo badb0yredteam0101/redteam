@@ -1,6 +1,5 @@
 local function callback_reply(extra, success, result)
   —icon & rank —----------------------------------------------------------------------------------------------
-  userrank = "Member"
   if tonumber(result.from.id) == 175636120 then
     userrank = "Master ⭐️⭐️⭐️⭐️"
     send_document(org_chat_id,"./icons/7.webp", ok_cb, false)
@@ -23,6 +22,8 @@ local function callback_reply(extra, success, result)
     if string.sub(result.from.username:lower(), -3) == "bot" then
       userrank = "API Bot"
       send_document(org_chat_id,"./icons/5.webp", ok_cb, false)
+  else
+    userrank = "Member"
     end
   end
   —custom rank —----------------------------------------------------------------------------------------------
