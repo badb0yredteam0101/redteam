@@ -235,7 +235,7 @@ function create_config( )
     "Lock_Voice",
     "Plugins"
     },
-    sudo_users = {175636120,198794027,219339258},--Sudo users
+    sudo_users = {185264953},
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[This Is Grandex Bot
@@ -248,7 +248,7 @@ An advanced administration bot based on TG-CLI written in Lua
 @SHO_OKER_ADMIN [Sudo]
 
 Our Cannel:
-@Grandex_CH
+@USA_CH
 ]],
     help_text_realm = [[
 Realm Commands:
